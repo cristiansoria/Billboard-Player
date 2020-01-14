@@ -14,7 +14,7 @@ def playSong(song):
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')
     options.add_argument("disable-gpu")
-    browser = webdriver.Chrome('/Users/cristiansoria/Downloads/chromedriver', chrome_options=options)
+    browser = webdriver.Chrome('$PATH', chrome_options=options)
     browser.get("https://soundcloud.com")
     try:
         search = browser.find_element_by_xpath("/html/body/div[1]/div[2]/div[2]/div/div/div[2]/div/div[1]/span/span/form/input")
@@ -56,7 +56,7 @@ def checkCharts():
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')
     options.add_argument("disable-gpu")
-    browser = webdriver.Chrome('/Users/cristiansoria/Downloads/chromedriver', chrome_options=options)
+    browser = webdriver.Chrome('$PATH', chrome_options=options)
     try:
         year = input("Select a year from 1958 - 2018 : ")
         browser.get("https://www.billboard.com/archive/charts/"+str(year))
